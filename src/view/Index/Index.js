@@ -11,11 +11,13 @@ export default class Index extends React.Component {
   componentDidMount() {
 
   }
-
+  _life(){
+    this.props.history.push({pathname: '/life'})
+  }
   render() {
     return (
         <div className="index">
-          <Button type="primary">Button</Button>
+          <Button onClick={() => this._life()} >生命周期</Button>
         </div>
     );
   }

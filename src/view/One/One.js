@@ -11,7 +11,8 @@ export default class One extends React.Component {
 
     }
     _one(){
-        this.props.history.replace('/two');
+        // this.props.history.replace('/two');//不可以退回上一级
+      this.props.history.push({pathname: '/two'})
     }
     render() {
         return (
