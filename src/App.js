@@ -1,6 +1,7 @@
 import One from './view/One/One'
 import Two from './view/Two/Two'
-import './App.css';
+import  Index from './view/Index/Index'
+import './App.less';
 import {
     BrowserRouter as Router,
     Switch,
@@ -11,7 +12,8 @@ function App() {
   return (
       <Router>
           <Switch>
-              <Route exact path={`/`} component={One} />
+              <Route exact path={`/one`} component={One} />
+              <Route exact path={`/`} component={Index} />
               <Route exact path={`/two`} component={Two} />
           </Switch>
       </Router>
