@@ -3,12 +3,31 @@ import "./index.less";
 
 export default class Life extends React.Component{
     constructor(props) {
+        console.log(`LifeIndex-->1、constructor`);
         super(props);
-        this.state = {  };
+        this.state = {};
     }
-    componentDidMount(){
 
+    static getDerivedStateFromProps(props, state){
+        console.log(`LifeIndex-->1、getDerivedStateFromProps`);
+        return null;
     }
+    componentDidMount() {
+        console.log(`LifeIndex-->1、componentDidMount`);
+    }
+    shouldComponentUpdate(){
+        console.log(`LifeIndex-->1、shouldComponentUpdate`);
+    }
+    getSnapshotBeforeUpdate(){
+        console.log(`LifeIndex-->1、getSnapshotBeforeUpdate`);
+    }
+    componentDidUpdate(){
+        console.log(`LifeIndex-->1、componentDidUpdate`);
+    }
+    componentWillUnmount(){
+        console.log(`LifeIndex-->1、componentWillUnmount`);
+    }
+
     //简单的生命周期
   _simpleLife(){
     this.props.history.push({pathname: '/simpleLife'})
@@ -22,8 +41,8 @@ export default class Life extends React.Component{
     this.props.history.push({pathname: '/dataLifeToSon'})
   }
   //子组件改变父组件
-  _sonChangeFather(){
-    this.props.history.push({pathname: '/sonChangeFather'})
+  _sonChangeLifeIndex(){
+    this.props.history.push({pathname: '/sonChangeLifeIndex'})
   }
   //路由跳转,生命周期
   _routerLife(){
@@ -72,7 +91,7 @@ export default class Life extends React.Component{
               </button>
                 <br />
                 <br />
-                <button onClick={()=>this._sonChangeFather()}>
+                <button onClick={()=>this._sonChangeLifeIndex()}>
                 <span className="blue">子组件</span><span className="red">更新</span
                 ><span className="blue">父组件</span>
               </button>

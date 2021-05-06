@@ -1,5 +1,6 @@
 import React from 'react';
 import "./index.less";
+import Son from './Son.js'
 
 export default class SimpleLife extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class SimpleLife extends React.Component {
     return (
         <div className="simpleLife">
           SimpleLife
+          <Son/>
         </div>
     );
   }
