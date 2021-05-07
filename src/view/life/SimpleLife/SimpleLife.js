@@ -1,5 +1,5 @@
 import React from 'react';
-import "./index.less";
+import Son from './Son'
 import Son from './Son.js'
 
 export default class SimpleLife extends React.Component {

@@ -1,39 +1,37 @@
 import React from 'react';
 import GrandSon from "./GrandSon";
-//import "./index.less";
-
 export default class Son extends React.Component {
-    constructor(props) {
-        console.log(`%c       Son-->1、constructor`, "color:#CE0000");
-        super(props);
-        this.state = {};
-    }
+  constructor(props) {
+    console.log(`%c       Son-->1、constructor`, "color:#CE0000");
+    super(props);
+    this.state = {};
+  }
 
-    static getDerivedStateFromProps(props, state){
-        console.log(`%c       Son-->1、getDerivedStateFromProps`, "color:#CE0000");
-        return null;
-    }
-    componentDidMount() {
-        console.log(`%c       Son-->1、componentDidMount`, "color:#CE0000");
-    }
-    shouldComponentUpdate(){
-        console.log(`%c       Son-->1、shouldComponentUpdate`, "color:#CE0000");
-    }
-    getSnapshotBeforeUpdate(){
-        console.log(`%c       Son-->1、getSnapshotBeforeUpdate`, "color:#CE0000");
-    }
-    componentDidUpdate(){
-        console.log(`%c       Son-->1、componentDidUpdate`, "color:#CE0000");
-    }
-    componentWillUnmount(){
-        console.log(`%c       Son-->1、componentWillUnmount`, "color:#CE0000");
-    }
-    render() {
-        return (
-            <div className="Son">
-                Son
-                <GrandSon/>
-            </div>
-        );
-    }
+  static getDerivedStateFromProps(props, state){
+    console.log(`%c       Son-->2、getDerivedStateFromProps`, "color:#CE0000");
+    return null;
+  }
+  componentDidMount() {
+    console.log(`%c       Son-->3、componentDidMount`, "color:#CE0000");
+  }
+  shouldComponentUpdate(){
+    console.log(`%c       Son-->4、shouldComponentUpdate`, "color:#CE0000");
+  }
+  getSnapshotBeforeUpdate(){
+    console.log(`%c       Son-->5、getSnapshotBeforeUpdate`, "color:#CE0000");
+  }
+  componentDidUpdate(){
+    console.log(`%c       Son-->6、componentDidUpdate`, "color:#CE0000");
+  }
+  componentWillUnmount(){
+    console.log(`%c       Son-->7、componentWillUnmount`, "color:#CE0000");
+  }
+  render() {
+    return (
+        <div className="Son" style={{marginLeft:'40px',border:'1px solid #ce0000'}}>
+          Son
+          <GrandSon/>
+        </div>
+    );
+  }
 }
