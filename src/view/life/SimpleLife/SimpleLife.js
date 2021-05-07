@@ -1,6 +1,5 @@
 import React from 'react';
 import Son from './Son'
-import Son from './Son.js'
 
 export default class SimpleLife extends React.Component {
   constructor(props) {
