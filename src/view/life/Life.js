@@ -42,7 +42,7 @@ export default class Life extends React.Component{
   }
   //子组件改变父组件
   _sonChangeLifeIndex(){
-    this.props.history.push({pathname: '/sonChangeLifeIndex'})
+    this.props.history.push({pathname: '/sonChangeFather'})
   }
   //路由跳转,生命周期
   _routerLife(){

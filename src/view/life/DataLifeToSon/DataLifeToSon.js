@@ -38,7 +38,7 @@ export default class DataLifeToSon extends React.Component {
     return (
         <div className="dataLifeToSon">
           DataLifeToSon
-          <button  onClick={() => this.handleClick()}>不传给子组件</button>
+          <button  onClick={() => this.handleClick()}>传给子组件</button>
           <Son toSonData={this.state.toSonData}/>
         </div>
     );

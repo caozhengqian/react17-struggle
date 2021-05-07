@@ -1,6 +1,6 @@
 import React from 'react';
 import "./index.less";
-
+import Son from './Son'
 export default class SonChangeFather extends React.Component {
   constructor(props) {
     super(props);
@@ -15,6 +15,7 @@ export default class SonChangeFather extends React.Component {
     return (
         <div className="sonChangeFather">
           SonChangeFather
+          <Son/>
         </div>
     );
   }
