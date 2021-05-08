@@ -7,6 +7,7 @@ import DataLifeNotToSon from './view/life/DataLifeNotToSon/DataLifeNotToSon'
 import DataLifeToSon from './view/life/DataLifeToSon/DataLifeToSon'
 import SonChangeFather from './view/life/SonChangeFather/SonChangeFather'
 import RouterLife from './view/life/RouterLife/RouterLife'
+import TestRouter from './view/life/RouterLife/TestRouter'
 import RouterLifeTimeOut from './view/life/RouterLifeTimeOut/RouterLifeTimeOut'
 import UnComLife from './view/life/UnComLife/UnComLife'
 import UnComLifeTimeOut from './view/life/UnComLifeTimeOut/UnComLifeTimeOut'
@@ -34,6 +35,7 @@ function App() {
               <Route exact path={`/dataLifeToSon`} component={DataLifeToSon} />
               <Route exact path={`/sonChangeFather`} component={SonChangeFather} />
               <Route exact path={`/routerLife`} component={RouterLife} />
+              <Route exact path={`/routerLife/TestRouter`} component={TestRouter} />
               <Route exact path={`/routerLifeTimeOut`} component={RouterLifeTimeOut} />
               <Route exact path={`/unComLife`} component={UnComLife} />
               <Route exact path={`/unComLifeTimeOut`} component={UnComLifeTimeOut} />
