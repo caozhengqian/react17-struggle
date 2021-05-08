@@ -31,13 +31,14 @@ export default class Son extends React.Component {
     console.log(`%c       Son-->7、componentWillUnmount`, "color:#CE0000");
   }
   handleClick(){
-    this.setState({toSonData: this.state.toSonData+1})
+    this.props.toSonFuns()
   }
   render() {
     return (
         <div className="Son">
           Son
-          <button  onClick={() => this.handleClick()}>传给子组件</button>
+          <button  onClick={() => this.handleClick()}>改变父组件的值</button>
+          {this.props.toSonData}
           <GrandSon/>
         </div>
     );
