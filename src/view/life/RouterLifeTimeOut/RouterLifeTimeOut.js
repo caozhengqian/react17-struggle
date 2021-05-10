@@ -31,9 +31,8 @@ export default class RouterLifeTimeOut extends React.Component {
     console.log(`%c Father-->1、componentWillUnmount`, "color:#FF9797");
   }
   handleClick(){
-    home(2000).then(() => {
-      this.props.history.push({pathname: '/routerLife/TestRouter'})
-    })
+    this.props.history.push({pathname: '/routerLife/TestRouterTimeOut'})
+
   }
 
   render() {
