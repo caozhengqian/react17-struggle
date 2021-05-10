@@ -30,14 +30,10 @@ export default class Son extends React.Component {
   componentWillUnmount(){
     console.log(`%c       Son-->7、componentWillUnmount`, "color:#CE0000");
   }
-  handleClick(){
-  }
   render() {
     return (
         <div className="Son">
           Son
-          <button  onClick={() => this.handleClick()}>跳转路由</button>
-          {this.props.toSonData}
           <GrandSon/>
         </div>
     );

@@ -1,14 +1,13 @@
 import React from 'react';
 import "./index.less";
 import Son from './Son'
+import {home} from '../../../api/request'
 
 export default class RouterLifeTimeOut extends React.Component {
   constructor(props) {
     console.log(`%c Father-->1、constructor`, "color:#FF9797");
     super(props);
-    this.state = {
-      aa:1
-    };
+    this.state = {};
   }
   static getDerivedStateFromProps(props, state){
     console.log(`%c Father-->1、getDerivedStateFromProps`, "color:#FF9797");
@@ -31,11 +30,19 @@ export default class RouterLifeTimeOut extends React.Component {
   componentWillUnmount(){
     console.log(`%c Father-->1、componentWillUnmount`, "color:#FF9797");
   }
+  handleClick(){
+    home(2000).then(() => {
+      this.props.history.push({pathname: '/routerLife/TestRouter'})
+    })
+  }
 
   render() {
     return (
         <div className="routerLifeTimeOut">
           RouterLifeTimeOut
+          <button  onClick={() => this.handleClick()}>
+            <span className='red'>延迟2秒</span>跳转路由
+          </button>
           <Son/>
         </div>
     );
