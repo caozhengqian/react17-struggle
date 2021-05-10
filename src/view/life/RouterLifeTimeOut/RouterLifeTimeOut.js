@@ -1,7 +1,6 @@
 import React from 'react';
 import "./index.less";
 import Son from './Son'
-import {home} from '../../../api/request'
 
 export default class RouterLifeTimeOut extends React.Component {
   constructor(props) {

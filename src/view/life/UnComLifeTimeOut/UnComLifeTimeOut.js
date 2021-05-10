@@ -1,11 +1,14 @@
 import React from 'react';
 import "./index.less";
+import Son from './Son'
 
 export default class UnComLifeTimeOut extends React.Component {
   constructor(props) {
     console.log(`%c Father-->1、constructor`, "color:#FF9797");
     super(props);
-    this.state = {};
+    this.state = {
+      showSon:true
+    };
   }
   static getDerivedStateFromProps(props, state){
     console.log(`%c Father-->1、getDerivedStateFromProps`, "color:#FF9797");
@@ -28,10 +31,15 @@ export default class UnComLifeTimeOut extends React.Component {
   componentWillUnmount(){
     console.log(`%c Father-->1、componentWillUnmount`, "color:#FF9797");
   }
+  handleClick(){
+    this.setState({showSon: !this.state.showSon})
+  }
   render() {
     return (
         <div className="unComLifeTimeOut">
           UnComLifeTimeOut
+          <button  onClick={() => this.handleClick()}>切换组件</button>
+          <Son/>
         </div>
     );
   }
