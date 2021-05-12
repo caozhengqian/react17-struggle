@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.less";
 import Son from './Son'
+import Son10 from "./Son10";
 
 export default class UnComLifeTimeOut extends React.Component {
   constructor(props) {
@@ -39,7 +40,9 @@ export default class UnComLifeTimeOut extends React.Component {
         <div className="unComLifeTimeOut">
           UnComLifeTimeOut
           <button  onClick={() => this.handleClick()}>切换组件</button>
-          <Son/>
+          {
+            this.state.showSon ?<Son/>:<Son10/>
+          }
         </div>
     );
   }
